@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+void revName(char *n){
+    if(*n==NULL){
+        return;
+    }
+    else{
+        revName(n+1);
+        printf("%c",*n);
+    }
+}
+
+int main(){
+    char *name="ABCDEF";
+    revName(name);
+    return 0;
+}
